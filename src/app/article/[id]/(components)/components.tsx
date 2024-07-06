@@ -20,7 +20,7 @@ export function Paragraph({ children }: any) {
 
 export function Citate({ children }: any) {
     return (
-        <p className="italic">{children}</p>
+        <p className="italic opacity-80">{children}</p>
     );
 }
 
@@ -86,7 +86,7 @@ export function Banner({ src, alt }: any) {
     return (
         <div className="w-full h-[40vh] rounded-md bg-center bg-cover" style={{ backgroundImage: `url(${src})` }}>
             <div className="w-full h-full bg-black/20 grid place-content-center place-items-center">
-                <h1 className="text-4xl font-bold text-white">{alt}</h1>
+                <h1 className="text-4xl font-bold text-white text-center">{alt}</h1>
             </div>
         </div>
     );

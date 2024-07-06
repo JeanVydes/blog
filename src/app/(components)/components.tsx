@@ -1,10 +1,13 @@
-export function Card({ className, title, bg }: {
+import Link from "next/link";
+
+export function Card({ className, title, bg, to }: {
     className?: string;
     title: string;
     bg: string;
+    to: string
 }) {
     return (
-        <div className={`${className} rounded-lg bg-cover bg-center`} style={{ backgroundImage: `url(${bg})` }}>
+        <Link href={to} className={`${className} rounded-lg bg-cover bg-center`} style={{ backgroundImage: `url(${bg})` }}>
             <div className="w-full h-full m-0 p-0 md:p-4 lg:p-8 bg-black/40 hover:backdrop-blur-sm grid grid-cols-1 place-items-center place-content-center text-center rounded-lg break-normal gap-y-2">
                 <p className="text-xl md:text-2xl lg:text-4xl text-center text-[#f0f0f0] font-bold break-normal text-ellipsis">{title}</p>
 
@@ -12,7 +15,7 @@ export function Card({ className, title, bg }: {
                     Read
                 </div>
             </div>
-        </div>
+        </Link>
     )
 }
 

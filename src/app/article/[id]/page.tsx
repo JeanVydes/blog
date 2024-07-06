@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import articles from "./(articles)/articles";
 import Article404 from "./(components)/404";
-import { Article, setMetadata } from "./(articles)/article";
+import { Article, randomIntFromInterval, setMetadata } from "./(articles)/article";
 import Head from "next/head";
+import Link from "next/link";
 
 export default function ArticlePage() {
     const [article, setArticle] = useState<Article | null>(null);
@@ -48,15 +49,24 @@ export default function ArticlePage() {
 
     setMetadata(metaTags);
 
+    let random_article = articles[randomIntFromInterval(1, articles.length - 1)];
+
     return (
         <div>
             <div className="w-full h-screen flex justify-center text-[#0f0f0f]">
-                <article className="w-full md:w-2/3 lg:w-1/2 border-r border-r-[#0f0f0f] border-l border-l-[#0f0f0f] px-4 md:px-6 lg:px-12 overflow-y-auto">
-                    <h1 className="text-2xl font-bold w-full py-4 text-center">{article.title}</h1>
-                    <div className="w-full">
-                        <p className="text-md text-center">Published by {article.author} at {article.date.toDateString()}</p>
+                <article className="w-full md:w-2/3 lg:w-1/2 border-r border-r-[#0f0f0f] border-l border-l-[#0f0f0f]">
+                    <div className="flex flex-row items-center justify-between text-center px-6  fixed w-full h-12 bg-[#fafafa]/60 backdrop-blur-sm">
+                        <Link className="w-full h-12 grid place-items-center" href={"/"}>Home</Link>
+                        <h1 className="w-full">Jean's Blog</h1>
+                        <Link className="w-full h-12 grid place-items-center" href={`/article/${random_article.match_params[0]}`}>Random</Link>
                     </div>
-                    {article.content}
+                    <div className="px-4 md:px-6 lg:px-12 overflow-y-auto mt-12">
+                        <h1 className="text-2xl font-bold w-full py-4 text-center">{article.title}</h1>
+                        <div className="w-full">
+                            <p className="text-md text-center">Published by {article.author} at {article.date.toDateString()}</p>
+                        </div>
+                        {article.content}
+                    </div>
                 </article>
             </div>
         </div>
