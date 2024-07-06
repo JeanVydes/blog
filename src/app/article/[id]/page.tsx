@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import articles from "./(articles)/articles";
 import Article404 from "./(components)/404";
-import { Article } from "./(articles)/article";
+import { Article, setMetadata } from "./(articles)/article";
 import Head from "next/head";
 
 export default function ArticlePage() {
@@ -61,31 +61,4 @@ export default function ArticlePage() {
             </div>
         </div>
     );
-}
-
-export function setMetadata(metaTags: any) {
-    metaTags.forEach((tag: any) => {
-        let meta: HTMLMetaElement | null;
-        if (tag.name) {
-            meta = document.querySelector(`meta[name="${tag.name}"]`);
-        } else if (tag.property) {
-            meta = document.querySelector(`meta[property="${tag.property}"]`);
-        } else {
-            return;
-        }
-
-        if (meta) {
-            meta.content = tag.content;
-        } else {
-            meta = document.createElement('meta');
-            if (tag.name) {
-                meta.name = tag.name;
-            }
-            if (tag.property) {
-                meta.setAttribute('property', tag.property);
-            }
-            meta.content = tag.content;
-            document.head.appendChild(meta);
-        }
-    });
 }
