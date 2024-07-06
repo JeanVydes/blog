@@ -55,7 +55,7 @@ export default function ArticlePage() {
         <div>
             <div className="w-full h-screen flex justify-center text-[#0f0f0f]">
                 <article className="w-full md:w-2/3 lg:w-1/2 border-r border-r-[#0f0f0f] border-l border-l-[#0f0f0f]">
-                    <div className="flex flex-row items-center justify-between text-center px-6  fixed w-full h-12 bg-[#fafafa]/60 backdrop-blur-sm">
+                    <div className="flex flex-row items-center justify-between text-center px-6  fixed w-full md:w-2/3 lg:w-1/2 h-12 bg-[#fafafa]/60 backdrop-blur-sm">
                         <Link className="w-full h-12 grid place-items-center" href={"/"}>Home</Link>
                         <h1 className="w-full">Jean's Blog</h1>
                         <Link className="w-full h-12 grid place-items-center" href={`/article/${random_article.match_params[0]}`}>Random</Link>
