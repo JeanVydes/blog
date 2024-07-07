@@ -4,6 +4,7 @@ import "./globals.css";
 import Head from "next/head";
 
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const font = Montserrat({ subsets: ["latin"] });
 
@@ -27,6 +28,7 @@ export default function RootLayout({
             <body className={`w-full max-h-screen ${font.className} text-md text-[#f0f0f0]`}>
                 {children}
                 <SpeedInsights />
+                <Analytics />
             </body>
         </html>
     );
