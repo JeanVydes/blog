@@ -38,3 +38,23 @@ export function setMetadata(metaTags: any) {
 export function randomIntFromInterval(min: any, max: any) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
+
+export function getUniqueArticlesByMatchParams(articles: any, numArticles: number) {
+    let uniqueMatchParams = new Set();
+    let uniqueArticles = [];
+
+    while (uniqueMatchParams.size < numArticles) {
+        console.log(uniqueMatchParams);
+        let randomIndex = randomIntFromInterval(0, articles.length - 1);
+        let selectedArticle = articles[randomIndex];
+        let matchParams = selectedArticle.match_params[0]; // Assuming match_params contains unique IDs
+
+        if (!uniqueMatchParams.has(matchParams)) {
+            uniqueMatchParams.add(matchParams);
+            uniqueArticles.push(selectedArticle);
+        }
+    }
+
+    return uniqueArticles;
+}

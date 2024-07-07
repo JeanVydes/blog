@@ -8,9 +8,9 @@ const IsNextjsLosingItsShine: Article = {
     date: new Date(),
     tags: ["nextjs", "performance", "web development", "SEO"],
     preview: "Is Next.js still the performance champion it once was? Explore potential issues and solutions to maintain optimal performance.",
-    banner: "https://i.pinimg.com/564x/4e/60/10/4e6010f4f104d62312b9910032e44ce2.jpg",
+    banner: "https://i.pinimg.com/564x/71/89/09/7189098af0283059b960be1c055b60f7.jpg",
     content: <>
-        <Banner src="https://i.pinimg.com/564x/4e/60/10/4e6010f4f104d62312b9910032e44ce2.jpg" alt="Next.js Performance" />
+        <Banner src="https://i.pinimg.com/564x/71/89/09/7189098af0283059b960be1c055b60f7.jpg" alt="Next.js Performance" />
         <Subtitle>Next.js: A Performance Powerhouse (But Not Without Caveats)</Subtitle>
         <Paragraph>Next.js remains a popular choice for building high-performance React applications. It is renowned for its built-in features like automatic code-splitting, static site generation (SSG), and server-side rendering (SSR), all of which contribute to enhanced performance.</Paragraph>
         <List>
