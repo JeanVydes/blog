@@ -53,19 +53,31 @@ export default function ArticlePage() {
 
     return (
         <div>
-            <div className="w-full h-screen flex justify-center text-[#0f0f0f]">
-                <article className="w-full md:w-2/3 lg:w-1/2 border-r border-r-[#0f0f0f] border-l border-l-[#0f0f0f]">
-                    <div className="flex flex-row items-center justify-between text-center px-6  fixed w-full md:w-2/3 lg:w-1/2 h-12 bg-[#fafafa]/60 backdrop-blur-sm">
+            <div className="w-full h-auto flex justify-center text-[#0f0f0f]">
+                <article className="w-full md:w-2/3 lg:w-1/2">
+                    <div className="flex flex-row items-center justify-between text-center px-6 fixed w-full md:w-2/3 lg:w-1/2 h-12 bg-[#fafafa]/60 backdrop-blur-sm">
                         <Link className="w-full h-12 grid place-items-center" href={"/"}>Home</Link>
                         <h1 className="w-full">Jean's Blog</h1>
                         <Link className="w-full h-12 grid place-items-center" href={`/article/${random_article.match_params[0]}`}>Random</Link>
                     </div>
-                    <div className="px-4 md:px-6 lg:px-12 overflow-y-auto mt-12">
-                        <h1 className="text-2xl font-bold w-full py-4 text-center">{article.title}</h1>
-                        <div className="w-full">
+                    <div className="px-4 md:px-6 lg:px-12 mt-12">
+                        <div className="w-full text-sm opacity-60">
                             <p className="text-md text-center">Published by {article.author} at {article.date.toDateString()}</p>
                         </div>
+                        <h1 className="text-2xl font-bold w-full pb-4 text-center">{article.title}</h1>
                         {article.content}
+                        <div className="w-full flex flex-col justify-center h-14 items-center text-center">
+                            <span>Tags</span>
+                            <div className="flex flex-row space-x-1 text-sm opacity-80">
+                                {article.tags.map((tag, index) => (
+                                    <span key={index} className="mx-2">{tag}</span>
+                                ))}
+                            </div>
+                            <span onClick={() => {
+                                navigator.clipboard.writeText(window.location.href);
+                                alert("Link copied to clipboard!");
+                            }} className="grid place-items-center text-center items-center hover:cursor-pointer focus:border py-2">Copy Link</span>
+                        </div>
                     </div>
                 </article>
             </div>

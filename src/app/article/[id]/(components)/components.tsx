@@ -8,7 +8,7 @@ export function Title({ children }: any) {
 
 export function Subtitle({ children }: any) {
     return (
-        <h1 className="text-lg md:text-xl font-semibold py-2">{children}</h1>
+        <h2 className="text-lg md:text-xl font-semibold py-2">{children}</h2>
     );
 }
 
