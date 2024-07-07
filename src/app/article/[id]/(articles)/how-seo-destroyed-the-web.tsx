@@ -4,7 +4,7 @@ import { Article } from "./article"
 const HowSEODestroyedTheWeb: Article = {
     match_params: ["how-seo-destroyed-the-web"],
     title: "How SEO Destroyed the Web",
-    author: "Bard",
+    author: "Jean",
     date: new Date(),
     tags: ["SEO", "web development", "internet culture"],
     preview: "SEO has revolutionized the way content is discovered online, but at what cost? Explore the darker side of SEO and its impact on the web.",

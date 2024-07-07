@@ -66,9 +66,9 @@ export default function ArticlePage() {
                         </div>
                         <h1 className="text-2xl font-bold w-full pb-4 text-center">{article.title}</h1>
                         {article.content}
-                        <div className="w-full flex flex-col justify-center h-14 items-center text-center">
+                        <div className="w-full flex flex-col justify-center h-14 items-center text-center py-24">
                             <span>Tags</span>
-                            <div className="flex flex-row space-x-1 text-sm opacity-80">
+                            <div className="flex flex-row space-x-1 text-sm opacity-80 mb-6">
                                 {article.tags.map((tag, index) => (
                                     <span key={index} className="mx-2">{tag}</span>
                                 ))}

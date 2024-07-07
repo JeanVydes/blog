@@ -4,7 +4,7 @@ import { Article } from "./article"
 const TheAIHype: Article = {
     match_params: ["the-ai-hype-whats-real-and-whats-not"],
     title: "The AI Hype: What's Real and What's Not",
-    author: "Bard",
+    author: "Jean",
     date: new Date(),
     tags: ["AI", "technology", "future"],
     preview: "Artificial Intelligence promises to revolutionize the world, but not all the hype is warranted. Let's separate fact from fiction.",

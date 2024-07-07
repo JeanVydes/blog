@@ -4,7 +4,7 @@ import { Article } from "./article"
 const DevelopingMicroservicesWithRustAndDocker: Article = {
     match_params: ["developing-microservices-with-rust-and-docker"],
     title: "Developing Microservices with Rust and Docker",
-    author: "GPT",
+    author: "Jean",
     date: new Date(),
     tags: ["rust", "docker", "microservices", "web development"],
     preview: "Learn how to build, deploy, and manage microservices using Rust and Docker with this comprehensive guide.",

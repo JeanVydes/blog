@@ -4,7 +4,7 @@ import { Article } from "./article"
 const IsNextjsLosingItsShine: Article = {
     match_params: ["nextjs-its-losing-its-shine"],
     title: "Is Next.js Performance Taking a Hit?",
-    author: "GPT",
+    author: "Jean",
     date: new Date(),
     tags: ["nextjs", "performance", "web development", "SEO"],
     preview: "Is Next.js still the performance champion it once was? Explore potential issues and solutions to maintain optimal performance.",

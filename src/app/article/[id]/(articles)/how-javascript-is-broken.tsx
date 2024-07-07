@@ -4,7 +4,7 @@ import { Article } from "./article"
 const HowJavaScriptIsBroken: Article = {
     match_params: ["how-javascript-is-broken"],
     title: "How JavaScript is Broken",
-    author: "Bard",
+    author: "Jean",
     date: new Date(),
     tags: ["javascript", "web development", "programming"],
     preview: "JavaScript powers the modern web, but it's far from perfect. Explore the issues that make JavaScript a problematic language.",
