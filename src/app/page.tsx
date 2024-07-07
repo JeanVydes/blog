@@ -17,7 +17,7 @@ export default function Home() {
         
     return (
         <div className="max-w-screen">
-            <div className="bg-[#0f0f0f] w-full h-[40vh] grid place-items center place-content-center text-center items-center relative">
+            <div className="w-full h-[40vh] grid place-items center place-content-center text-center items-center relative">
                 <h3 className="text-[10vh] absolute w-full text-center font-bold tracking-[0.3em]">Jean Blog</h3>
             </div>
             <div className="w-full h-auto md:h-screen lg:h-screen">
@@ -45,15 +45,15 @@ export default function Home() {
                     <Card className="col-span-2 h-72" title={fourth.title || ""} bg={fourth.banner || ""} to={`/article/${fourth.match_params[0] || ""}`} />
                 </div>
             </div>
-            <div className="bg-[#0f0f0f] w-full h-screen grid place-items center place-content-center text-center items-center relative">
+            <div className="w-full h-screen grid place-items center place-content-center text-center items-center relative">
                 <h3 className="text-xl">Archive</h3>
             </div>
-            <div className="bg-[#0f0f0f] w-full h-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-2">
+            <div className="w-full h-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-2">
                 {articles.slice(1).reverse().map((article, index) => <>
                     <Card className="col-span-1" title={article.title || ""} bg={article.banner || ""} to={`/article/${article.match_params[0]  || ""}`} />
                 </>)}
             </div>
-            <div className="bg-[#0f0f0f] w-full flex flex-row items-center h-screen text-center justify-center">
+            <div className="w-full flex flex-row items-center h-screen text-center justify-center">
                 <span>a blog by Jean</span>
             </div>
         </div>

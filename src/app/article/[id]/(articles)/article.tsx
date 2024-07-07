@@ -45,7 +45,6 @@ export function getUniqueArticlesByMatchParams(articles: any, numArticles: numbe
     let uniqueArticles = [];
 
     while (uniqueMatchParams.size < numArticles) {
-        console.log(uniqueMatchParams);
         let randomIndex = randomIntFromInterval(0, articles.length - 1);
         let selectedArticle = articles[randomIndex];
         let matchParams = selectedArticle.match_params[0]; // Assuming match_params contains unique IDs
