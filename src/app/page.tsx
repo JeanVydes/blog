@@ -17,7 +17,7 @@ export default function Home() {
         
     return (
         <div className="max-w-screen">
-            <div className="w-full h-[40vh] grid place-items center place-content-center text-center items-center relative">
+            <div className="w-full h-auto grid place-items center place-content-center text-center items-center relative flex flex-col items-center justify-center">
                 <h3 className="text-[10vh] absolute w-full text-center font-bold tracking-[0.3em]">Jean Blog</h3>
             </div>
             <div className="w-full h-auto md:h-screen lg:h-screen">
@@ -45,8 +45,11 @@ export default function Home() {
                     <Card className="col-span-2 h-72" title={fourth.title || ""} bg={fourth.banner || ""} to={`/article/${fourth.match_params[0] || ""}`} />
                 </div>
             </div>
-            <div className="w-full h-screen grid place-items center place-content-center text-center items-center relative">
-                <h3 className="text-xl">Archive</h3>
+            <div className="w-full h-screen text-center items-center relative overflow-hidden">
+                <div className="overflow-hidden w-full h-screen w-full">
+                    <iframe className="block ml-auto mr-auto overflow-hidden t-0 r-0 l-0 b-0 w-full h-screen" scrolling="no"
+                        src="https://53f307a9.sibforms.com/serve/MUIFACyjyGSe8o_FXGbWBeVfnKgJNPMJuf9l2wD8dKXYx4uP9mibMH1q3MfcXlKIIj6zAbbtaJIqVDu5fMN7OAMKA6JCLI1FaPa-rmP959MJwkdR5SzfkaXuj8-hqWvlJQzv7YRBmn_7vqjbVMB3lOZ7HMFx2VddLSu6GTU9limbHdY59AFV8DsuH4vg1hMrjHrxMa0Od2nVyJMk"></iframe>
+                </div>
             </div>
             <div className="w-full h-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-2">
                 {articles.slice(1).reverse().map((article, index) => <>
