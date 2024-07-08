@@ -17,7 +17,7 @@ export default function Home() {
         
     return (
         <div className="max-w-screen">
-            <div className="w-full h-auto grid place-items center place-content-center text-center items-center relative flex flex-col items-center justify-center">
+            <div className="w-full h-[40vh] grid place-items center place-content-center text-center items-center relative flex flex-col items-center justify-center">
                 <h3 className="text-[10vh] absolute w-full text-center font-bold tracking-[0.3em]">Jean Blog</h3>
             </div>
             <div className="w-full h-auto md:h-screen lg:h-screen">
